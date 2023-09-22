@@ -1,0 +1,22 @@
+.meow{
+    padding: 2rem;
+    color: red;
+  }
+  
+  .user_name{
+    color:  lightcoral;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+  }
+
+  .loadingFrame{
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .loadMsg{
+    color: red;
+  }
