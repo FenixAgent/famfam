@@ -1,11 +1,16 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
+@tailwind utilities; */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+ 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +24,35 @@
 body {
   color:aliceblue;
   background-color: #282829;
-    padding: 2rem;
+  
+}
+
+.home_wrapper{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.stage1{
+  width: 200px;
+  max-width: 500px;
+  border: 2px solid violet;
+  border-radius: 13%;
+  overflow-wrap:normal;
+  padding: 1rem;
+}
+
+.stage2,
+.stage3,
+.stage4{
+  /* height: 10rem; */
+  width: 40%;
+  border: 2px solid violet;
+  border-radius: 13%;
+  overflow-wrap:normal;
+  padding: 1rem;
+
+  
 }
 

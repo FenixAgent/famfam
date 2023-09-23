@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import path from "node:path";
+import "material-icons/iconfont/material-icons.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +21,13 @@ export default function RootLayout({
       <body className={inter.className}>
         <header
           style={{
-            position: "absolute",
-            backgroundColor: "midnight",
+            // position: "relative",
+            backgroundColor: "#101019",
             display: "flex",
+            justifyContent: "flex-start",
+            gap: "2em",
+            padding: "1rem",
+            marginBottom: "1rem",
             top: 0,
             left: 0,
           }}
