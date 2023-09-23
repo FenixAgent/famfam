@@ -1,8 +1,8 @@
 import Link from "next/link";
-import getMyUsers from "@/lib/getMyUsers";
+import { getMyUsers } from "@/lib/getMyUsers";
 
 export default async function Home() {
-  const usersData: Promise<MyUsers[]> = getMyUsers();
+  const usersData = getMyUsers();
   const users = await usersData;
 
   console.log("--7777->", users);

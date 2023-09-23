@@ -4,7 +4,8 @@ import Link from "next/link";
 import "./style.css";
 
 export const metadata: Metadata = {
-  title: "Users",
+  title: "User Page",
+  description: "User Page description",
 };
 
 export default async function UsersPage() {
