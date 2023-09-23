@@ -1,8 +1,9 @@
-import getUser from "@/lib/getUser";
-import getUserPosts from "@/lib/getUserPosts";
+import { getUser } from "@/lib/getUser";
+import { getUserInfo } from "@/lib/getUserInfo";
 import { Suspense } from "react";
 import UserPosts from "./components/UserPosts";
 import "../style.css";
+import { RowDataPacket } from "mysql2";
 
 type Params = {
   params: {
@@ -11,13 +12,14 @@ type Params = {
 };
 
 export default async function UsersPage({ params: { userId } }: Params) {
-  const userData: Promise<User> = getUser(userId);
-  const userPostsData: Promise<Post[]> = getUserPosts(userId);
+  const userData = getUser(userId);
+  const userPostsData: Promise<RowDataPacket[]> = getUserInfo(userId);
 
   const user = await userData;
+  console.log("CHECKING USER----", user);
   return (
     <>
-      <h2 className="meow">{user.name}</h2>
+      <h2 className="meow">{user[0].first_name + " " + user[0].last_name}</h2>
       <Suspense fallback={<h2>Loading...</h2>}>
         <UserPosts promise={userPostsData} />
       </Suspense>

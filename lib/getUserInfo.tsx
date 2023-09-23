@@ -7,7 +7,7 @@ const db = mysql.createConnection({
   database: "Fenix_Agent",
 });
 
-export async function getUser(userId: string) {
+export async function getUserInfo(userId: string) {
   return new Promise<RowDataPacket[]>((res, rej) => {
     db.connect((err) => {
       if (err) throw new Error("FAILED DB CONNECTION-----");

@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import "material-icons/iconfont/material-icons.css";
+import "material-symbols";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,8 +32,12 @@ export default function RootLayout({
             left: 0,
           }}
         >
-          <Link href="/">HOME</Link>
-          <Link href="/users">USERS</Link>
+          <Link href="/">
+            <span className="material-symbols-outlined testing">home</span>
+          </Link>
+          <Link href="/users">
+            <span className="material-symbols-outlined">account_circle</span>
+          </Link>
         </header>
         {children}
       </body>

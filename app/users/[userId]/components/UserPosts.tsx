@@ -1,19 +1,22 @@
+import { RowDataPacket } from "mysql2";
+
 type Props = {
-  promise: Promise<Post[]>;
+  promise: Promise<RowDataPacket[]>;
 };
 
-export default async function UserPosts({ promise }: Props) {
-  const posts = await promise;
+export default async function UserInfo({ promise }: Props) {
+  const user = await promise;
+  console.log("---->>>>>", user);
+  const content = (
+    <article key={user[0].id}>
+      <p>{user[0].email}</p>
+      <p>{user[0].password}</p>
+      <br />
+      {user[0].is_admin ? <p>ADMIN RIGHTS</p> : null}
 
-  const content = posts.map((post) => {
-    return (
-      <article key={post.id}>
-        <h2>{post.title}</h2>
-        <p>{post.body}</p>
-        <br />
-      </article>
-    );
-  });
+      <br />
+    </article>
+  );
 
   return content;
 }

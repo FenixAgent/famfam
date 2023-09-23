@@ -13,7 +13,6 @@ export async function getAllUsers() {
       if (err) throw new Error("FAILED DB CONNECTION-----");
       db.query<RowDataPacket[]>("SELECT * FROM users", (rows, fields) => {
         res(fields);
-        console.log("ROWS HERE", rows);
       });
     });
   });

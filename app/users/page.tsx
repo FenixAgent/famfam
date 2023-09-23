@@ -13,7 +13,7 @@ export default async function UsersPage() {
 
   const usersData = getAllUsers();
   const users = await usersData;
-  console.log(users[0]);
+  // console.log(users[0]);
 
   const content = (
     <section className="user_list_wrapper">
