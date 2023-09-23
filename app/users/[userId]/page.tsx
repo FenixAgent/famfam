@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import UserPosts from "./components/UserPosts";
 import "../style.css";
 import { RowDataPacket } from "mysql2";
+import Link from "next/link";
 
 type Params = {
   params: {
@@ -16,7 +17,7 @@ export default async function UsersPage({ params: { userId } }: Params) {
   const userPostsData: Promise<RowDataPacket[]> = getUserInfo(userId);
 
   const user = await userData;
-  console.log("CHECKING USER----", user);
+
   return (
     <>
       <h2 className="meow">{user[0].first_name + " " + user[0].last_name}</h2>

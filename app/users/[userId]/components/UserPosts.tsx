@@ -1,4 +1,5 @@
 import { RowDataPacket } from "mysql2";
+import Link from "next/link";
 
 type Props = {
   promise: Promise<RowDataPacket[]>;
@@ -6,13 +7,16 @@ type Props = {
 
 export default async function UserInfo({ promise }: Props) {
   const user = await promise;
-  console.log("---->>>>>", user);
+
   const content = (
     <article key={user[0].id}>
       <p>{user[0].email}</p>
       <p>{user[0].password}</p>
       <br />
-      {user[0].is_admin ? <p>ADMIN RIGHTS</p> : null}
+      <hr />
+      {user[0].is_admin ? (
+        <Link href={`/users/${user[0].id}/adminhub`}>ADMIN HUB</Link>
+      ) : null}
 
       <br />
     </article>
