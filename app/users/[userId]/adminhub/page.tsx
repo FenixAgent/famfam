@@ -20,7 +20,6 @@ export default async function AdminHub({ promise }: Props) {
   const adminRights = (
     <>
       <h1>WELCOME TO THE ADMIN HUB!</h1>
-      {/* <p>SOMETHING : {user[0].password}</p> */}
       <p>SECRET! : {secretC}</p>
     </>
   );
@@ -29,6 +28,7 @@ export default async function AdminHub({ promise }: Props) {
     <>
       {/* {user[0].is_admin ? adminRights : notAdmin} */}
       <h1>WELCOME TO THE ADMIN HUB!</h1>
+      <p>SECRET : {secretC}</p>
 
       <br />
     </>
