@@ -8,8 +8,6 @@ export default function AboutLayout({
 }) {
   return (
     <>
-      <Link href="/">HOME</Link>
-      <br />
       <main>{children}</main>
     </>
   );

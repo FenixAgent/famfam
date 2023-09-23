@@ -5,17 +5,15 @@ export default async function Home() {
   const usersData = getMyUsers();
   const users = await usersData;
 
-  console.log("--7777->", users);
-
   return (
     <main className="nav">
-      <Link href="/users"> See All Users</Link>
-      <br />
+      {/* <Link href="/users"> See All Users</Link> */}
+      {/* <br /> */}
       {users.map((user) => {
         return (
-          <>
+          <section key={user.id}>
             <h2>{user.first_name}</h2>
-          </>
+          </section>
         );
       })}
     </main>

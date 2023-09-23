@@ -7,6 +7,9 @@
     color:  lightcoral;
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
+    transition: all .4s ease;
+    padding: 10px;
+    border: 1px solid grey;
   }
 
   .loadingFrame{
@@ -19,4 +22,20 @@
 
   .loadMsg{
     color: red;
+  }
+
+  .user_list_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    
+
+  }
+
+  .user_name:hover{
+    box-shadow: inset 0px 20px 10px rgba(128, 128, 128, 0.46) ;
+    border: 1.2px solid rgba(238, 130, 238, 0.489);
+    
   }
