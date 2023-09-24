@@ -9,24 +9,16 @@ export default async function Home() {
     <main className="nav">
       <section className="home_wrapper">
         <div className="stage1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-          rerum cum, ducimus quis, nulla eum velit incidunt quisquam neque
-          perspiciatis asperiores ipsa, exercitationem ipsum. Nam dolor quae
-          natus adipisci sequi.
+          <h1></h1>
         </div>
         <div className="stage2">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
-          dolores obcaecati, at alias porro amet quas ipsum odit sed nulla
-          necessitatibus quibusdam ducimus eaque aliquid, nam, odio itaque
-          possimus earum.
+          <h1 className="STAGE1"></h1>
         </div>
         <div className="stage3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
+          <h1 className="STAGE2"></h1>
         </div>
         <div className="stage4">
-          Atque commodi, tempore perspiciatis sit officia dolores at dolor
-          corrupti provident reprehenderit incidunt cumque ipsum quam quae esse
-          nobis non repellat veritatis!
+          <h1 className="STAGE3"></h1>
         </div>
       </section>
     </main>
